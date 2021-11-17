@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1649CAC6-A142-47B2-A6C7-96DEA39F3049}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DATask.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>DATask.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ProvisioningType>manual</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchSdkVersion>
+    </MtouchSdkVersion>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignProvision>
+    </CodesignProvision>
+    <MtouchExtraArgs>--linkskip=DATask</MtouchExtraArgs>
+    <MtouchFastDev>false</MtouchFastDev>
+    <OptimizePNGs>true</OptimizePNGs>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>false</MtouchNoSymbolStrip>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>
+    </CodesignEntitlements>
+    <CodesignProvision>VS: com.ePMS.DATask Development</CodesignProvision>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchExtraArgs>
+    </MtouchExtraArgs>
+    <MtouchEnableSGenConc>false</MtouchEnableSGenConc>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>Apple Distribution: Bianca Ungureanu (D92K6YCDRV)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>Khansaheb</CodesignProvision>
+    <MtouchLink>None</MtouchLink>
+    <BuildIpa>true</BuildIpa>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Khansaheb</CodesignProvision>
+    <CodesignKey>Apple Distribution: Bianca Ungureanu (D92K6YCDRV)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IpaPackageName>ePMS Facilities Management</IpaPackageName>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchSdkVersion>
+    </MtouchSdkVersion>
+    <MtouchFloat32>false</MtouchFloat32>
+    <MtouchExtraArgs>-optimize=force-rejected-types-removal</MtouchExtraArgs>
+    <OptimizePNGs>true</OptimizePNGs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>
+    </CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <OptimizePNGs>true</OptimizePNGs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Main.cs" />
+    <None Include="app.config" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Models\CustomDatePikerRenderer.cs" />
+    <Compile Include="Models\ImageResizer.cs" />
+    <Compile Include="Models\ImageResource.cs" />
+    <Compile Include="Models\MyToast.cs" />
+    <Compile Include="Models\SaveAndLoad.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork@2x" />
+    <None Include="packages.config" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\Fonts\arial-unicode-ms.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AsNum.XFControls, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XFControls.1.0.0.6\lib\Xamarin.iOS10\AsNum.XFControls.dll</HintPath>
+    </Reference>
+    <Reference Include="AsNum.XFControls.iOS, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XFControls.1.0.0.6\lib\Xamarin.iOS10\AsNum.XFControls.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="ExifLib, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ExifLib.PCL.1.0.1\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading, Version=2.4.11.982, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms, Version=2.4.7.944, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Forms.2.4.7.944\lib\Xamarin.iOS10\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms.Platform, Version=2.4.7.944, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.Forms.2.4.7.944\lib\Xamarin.iOS10\FFImageLoading.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform, Version=2.4.11.982, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.FFImageLoading.2.4.11.982\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microcharts.Forms, Version=1.0.6436.42762, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microcharts.Forms.0.6.2\lib\portable-net45+win8+wpa81+wp8\Microcharts.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AppCenter.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.iOS.Bindings, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AppCenter.2.0.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Configuration.1.1.2\lib\netstandard1.1\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Configuration.Abstractions.1.1.2\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Configuration.FileExtensions.1.1.2\lib\netstandard1.3\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Configuration.Json.1.1.2\lib\netstandard1.3\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.1.1\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.FileProviders.Abstractions.1.1.1\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.FileProviders.Physical.1.1.1\lib\netstandard1.3\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.FileSystemGlobbing.1.1.1\lib\netstandard1.3\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Logging.1.1.2\lib\netstandard1.1\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Logging.Abstractions.1.1.2\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Primitives.1.1.1\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.5.0.6\lib\xamarinios10\Plugin.Geolocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Media.4.0.1.5\lib\xamarinios10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Permissions.3.0.0.12\lib\xamarinios10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.IOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.IOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Rg.Plugins.Popup.1.0.4\lib\Xamarin.IOS\Rg.Plugins.Popup.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.1.59.3\lib\XamariniOS\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Forms, Version=1.59.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.Views.Forms.1.59.1.1\lib\XamariniOS\SkiaSharp.Views.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.iOS, Version=1.59.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SkiaSharp.Views.1.59.3\lib\XamariniOS\SkiaSharp.Views.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.iOS, Version=16.1451.0.24, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.16.1.0.24\lib\Xamarin.iOS10\Syncfusion.SfRating.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.XForms, Version=16.1451.0.24, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.16.1.0.24\lib\Xamarin.iOS10\Syncfusion.SfRating.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfRating.XForms.iOS, Version=16.1451.0.24, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Syncfusion.Xamarin.SfRating.16.1.0.24\lib\Xamarin.iOS10\Syncfusion.SfRating.XForms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.4.3.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="ToastIOS">
+      <HintPath>.\ToastIOS.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch, Version=1.0.6628.22311, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\WebP.Touch.1.0.8\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.5.0.280555\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="XLabs.Core, Version=2.0.5782.12218, Culture=neutral, PublicKeyToken=d65109b36e5040e4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XLabs.Core.2.0.5782\lib\Xamarin.iOS10\XLabs.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Ioc, Version=2.0.5782.12218, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XLabs.IoC.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Platform, Version=2.0.5782.12218, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XLabs.Platform.2.0.5782\lib\Xamarin.iOS10\XLabs.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.Platform.iOS, Version=2.0.5782.12247, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\XLabs.Platform.2.0.5782\lib\Xamarin.iOS10\XLabs.Platform.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DATask\DATask.csproj">
+      <Project>{3eb00d6e-7ffb-4ea5-a4e9-261f22bfc5df}</Project>
+      <Name>DATask</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-83.5%402x.png" />
+    <BundleResource Include="Resources\20.png" />
+    <BundleResource Include="Resources\29.png" />
+    <BundleResource Include="Resources\40.png" />
+    <BundleResource Include="Resources\58.png" />
+    <BundleResource Include="Resources\60.png" />
+    <BundleResource Include="Resources\76.png" />
+    <BundleResource Include="Resources\80.png" />
+    <BundleResource Include="Resources\87.png" />
+    <BundleResource Include="Resources\120.png" />
+    <BundleResource Include="Resources\152.png" />
+    <BundleResource Include="Resources\167.png" />
+    <BundleResource Include="Resources\180.png" />
+    <BundleResource Include="Resources\640x960.png" />
+    <BundleResource Include="Resources\640x1136.png" />
+    <BundleResource Include="Resources\768x1024.png" />
+    <BundleResource Include="Resources\1024.png" />
+    <BundleResource Include="Resources\1024x768.png" />
+    <BundleResource Include="Resources\1536x2048.png" />
+    <BundleResource Include="Resources\2048x1536.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\1024x768.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\1536x2048.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\2048x1536.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\640x1136.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\640x960.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\768x1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets')" />
+</Project>
